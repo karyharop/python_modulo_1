@@ -1,3 +1,9 @@
+print("\n")
+print("=" * 20)
+print("CONSTANTES_ARITMETICAS_Y _MÁS")
+print("=" * 20)
+print("\n")
+
 # Para aprender...
 print("¡Hola, mundo!")
 # comentario

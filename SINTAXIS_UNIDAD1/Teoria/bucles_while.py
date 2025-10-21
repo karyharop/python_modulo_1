@@ -113,8 +113,8 @@ nombres = ["Kary", "Jorge", "Marcos"] # si tiene corchetes es lista
 while nombres: nombres = ["Kary"]
 # if len(nombres) == 0:
 # print("Ya no quedan más nombres, este es el último:")
-    nombre = nombres.pop()
-    print(nombre)
+nombre = nombres.pop()
+print(nombre)
     
 # pass indica que no hay codigo todavia, se suele escribir cuando estamos
 # diseñando al principio qué código habrá sin crearlo del todo aún

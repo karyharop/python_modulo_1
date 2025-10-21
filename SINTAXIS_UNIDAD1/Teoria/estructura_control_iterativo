@@ -1,0 +1,55 @@
+print("\n")
+print("=" * 40)
+print("ESTRUCTURAS_CONTROL_ITERATIVO")
+print("=" * 40)
+print("\n")
+
+
+print("=" * 40)
+print("BUCLE FOR")
+print("=" * 40)
+
+frutas = ["manzana", "plátanos", "cerezas"]
+print(f"Lista de frutas: {frutas}")
+
+# Para cada elemento de la lista frutas... o puede ser Para cada fruta en frutas.
+
+for elemento_de_lista in frutas:
+    print(elemento_de_lista)
+    
+ 
+print("=" * 40)
+print("RANGE")
+print("=" * 40)   
+
+for i in range (5):# en Python, este rango comienza en 0.
+    #en PseInt, comenzaba en 1
+    print(i)
+
+# ejemplo
+for i in range (3,8):
+    print(i)
+ 
+for i in range (2, 11, 2):
+    print(i)
+     
+     #ejemplo
+
+for i in range (5, 0, 1):
+    print(i)
+     
+
+print("=" * 40)
+print("ITERAR_SOBRE_ÍNDICES")
+print("=" * 40)
+
+nombres : ["Ana", "Carlos", "Elena"]
+print(f"Lista de nombres: {nombres}")
+
+for i in range(len(nombres)):
+    print(f"Posicion {i}: {nombres[i]}")
+    
+# Tambien se puede hacer así... es igual    
+for indice, nombre in enumerate(nombres):
+    print(f"Posicion {indice}: {nombre}")
+

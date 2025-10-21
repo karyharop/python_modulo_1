@@ -1,6 +1,6 @@
 print("\n")
 print("=" * 40)
-print("ESTRUCTURAS CONTROL CONDICONAL")
+print("ESTRUCTURAS CONTROL CONDICiONAL")
 print("=" * 40)
 print("\n")
 
@@ -14,13 +14,15 @@ print("\n")
 # Si no se cumple, se salta el bloque de código indentado
 
 edadMayor = 20
-    print(f"Tienes {edadMayor} años")
+print(f"Tienes {edadMayor} años")
 
-if edad >=18:
-    print("Eres mayor de edad")
-    
+
 edad = 18
 print (f"Tienes {edad} años")
+
+if edad >= 18:
+    print("Eres mayor de edad")
+    
 
 hora = 10
 print(f"Hora: {hora}")
@@ -93,7 +95,7 @@ elif numero < 0:
 else:
     print("El número es cero")
  
- numero = 8
+numero = 8
 print(f"Número: {numero}")
     
 print("\n")
@@ -155,13 +157,13 @@ print(f"Edad: {edad}, estado civil: {estado_civil}")
 
 if edad >= 18:
     if estado_civil == "casado":
-    print("Eres un adulto casado")
+        print("Eres un adulto casado")
     else:
-    print("Eres un adulto soltero.")
+        print("Eres un adulto soltero.")
 else:
     print("Eres menor de edad.") 
     
-   print("\n")
+print("\n")
 print("=" * 40)
 print("CONDICIONAL TERNARIO")
 print("=" * 40)
@@ -174,60 +176,7 @@ mensaje = "Eres mayor de edad." if edad >= 18 else "Eres menor de edad"
 
 print(mensaje)
 
-print("\n")
-print("=" * 40)
-print("ESTRUCTURAS_CONTROL_ITERATIVO")
-print("=" * 40)
-print("\n")
 
-
-print("=" * 40)
-print("BUCLE FOR")
-print("=" * 40)
-
-frutas = ["manzana", "plátanos", "cerezas"]
-print(f"Lista de frutas: {frutas}")
-
-# Para cada elemento de la lista frutas... o puede ser Para cada fruta en frutas.
-
-for elemento_de_lista in frutas:
-    print(elemento_de_lista)
-    
- 
-print("=" * 40)
-print("RANGE")
-print("=" * 40)   
-
-for i in range (5):# en Python, este rango comienza en 0.
-    #en PseInt, comenzaba en 1
-    print(i)
-
-# ejemplo
-for i in range (3,8):
-    print(i)
- 
-for i in range (2, 11, 2):
-    print(i)
-     
-     #ejemplo
-
-for i in range (5, 0, 1):
-    print(i)
-     
-
-print("=" * 40)
-print("ITERAR_SOBRE_ÍNDICES")
-print("=" * 40)
-
-nombres : ["Ana", "Carlos", "Elena"]
-print(f"Lista de nombres: {nombres}")
-
-for i in range(len(nombres)):
-    print(f"Posicion {i}: {nombres[i]}")
-    
-# Tambien se puede hacer así... es igual    
-for indice, nombre in enumerate(nombres):
-    print(f"Posicion {indice}: {nombre}")
 
 
 
