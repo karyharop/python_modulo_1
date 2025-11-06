@@ -1,0 +1,50 @@
+"""
+- Todo lo que sea id, se usará para buscar algo
+- El put, hace actualizacion entera
+- un for normal, pasa por el primero, segundo, tercero y el enumerate da tb la posicion
+- en las clases de pydantic no se suele colocar id.
+- "solo se ejecuta en la url el get"
+
+"""
+
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+
+app = FastAPI()
+
+usuarios_db = [
+    {"id": 1, "nombre": "Grajilla", "email": "grajilla@aves.com", "edad": 27},
+    {"id": 2, "nombre": "Rabilargo", "email": "rabilargo@aves.com", "edad": 25}
+]
+
+class Usuario(BaseModel):
+    nombre: str
+    email: str
+    edad: int
+
+@app.get("/usuarios")
+def obtener_usuarios():
+    return usuarios_db
+
+@app.get("/usuarios/{usuario_id}")
+def obtener_usuario(usuario_id: int):
+    for user in usuarios_db:
+        if user["id"] == usuario_id:
+            return user
+    raise HTTPException(status_code=404, detail="404 - Usuario no encontrado")
+
+# PUT - Actualización completa (reemplazo)
+@app.put("/usuarios/{usuario_id}")
+def actualizar_usuario_completo(usuario_id: int, usuario: Usuario):
+    for i, user in enumerate(usuarios_db):
+        if user["id"] == usuario_id:
+            usuarios_db[i] = {
+                "id": usuario_id,
+                "nombre": usuario.nombre,
+                "email": usuario.email,
+                "edad": usuario.edad
+            }
+            return usuarios_db[i]
+    raise HTTPException(status_code=404, detail="404 - Usuario no encontrado")
+
+
